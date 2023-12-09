@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+ h1, h2, h3 {
+            font-size: 2em;
+            font-weight: bold;
+        }
+
+        h1 {
+            font-size: 5em;
+        }
+
+        ul {
+            font-size: 1em;
+        }
+
+ p {
+            font-size: 1.3em;
+            line-height: 1.5;
+        }        
+
+body {
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 100px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 2em;
+    color: #2b91bd;
+    pointer-events: none;
+    margin-right: 50px;
+}
+    
+.navigation a {
+    text-decoration: none;
+    color: #2b91bd; 
+    padding: 6px 15px; 
+    border-radius: 20px; 
+    margin: 0 10px;
+    font-weight: 600;
+}
+
+.navigation a:hover,
+.navigation a:active {
+    background: #2b91bd;
+    color: #fff;
+}
+
+.navigation a.active {
+    background: #2b91bd;
+    color: #fff;
+} 
+
+.parallax {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#text {
+    position: absolute;
+    font-size: 5em;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.parallax img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    pointer-events: none;
+}
+
+.sec {
+    position: relative;
+    background: #0c2f4d;
+    padding: 10px;
+}
+
+.container {
+    max-width: 1300px;
+    margin: 5px auto;
+    background: url('section-bg.png') center/cover;
+    border-radius: 15px;
+    padding: 10px;
+    opacity: 0;
+    transition: opacity 0.8s ease-in-out;
+}
+
+.container.show {
+    opacity: 1;
+}
+
+.container:hover {
+    transform: scale(1.1);
+    background-image: url('section-bg-hover.png');
+}
+
+ #scrollButton {
+            display: none;
+            position: fixed;
+            bottom: 80px;
+            right: 20px; 
+            color: #2b91bd;
+            border: none;
+            border-radius: 50%;
+            padding: 10px;
+            font-size: 40px;
+            cursor: pointer;
+        }
+
+@media screen and (max-width: 600px) {
+
+ footer {
+                padding: 5px; /* Adjust the padding for smaller screens */
+                font-size: 9px; /* Adjust the font size for smaller screens */
+            }
+#scrollButton {
+                bottom: 50px; /* Adjust the distance from the bottom for smaller screens */
+                right: 10px; /* Adjust the distance from the right for smaller screens */
+            } 
+}
